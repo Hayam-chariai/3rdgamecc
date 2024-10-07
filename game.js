@@ -4,16 +4,6 @@ window.onload = function() {
         const phrase = document.getElementById('phraseInput').value;
         const shift = parseInt(document.getElementById('shiftInput').value, 10);
 
-        if (phrase.trim() === "") {
-            alert("Please enter a phrase to encrypt.");
-            return;
-        }
-        
-        if (isNaN(shift)) {
-            alert("Please enter a valid shift number.");
-            return;
-        }
-
         const encryptedPhrase = caesarCipher(phrase, shift);
         
         document.getElementById('resultOutput').value = encryptedPhrase;
